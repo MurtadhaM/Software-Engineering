@@ -17,7 +17,7 @@ new_df = df.groupby(['Country']).agg(
     {'Confirmed': 'sum', 'Recovered': 'sum', 'Unrecovered': 'sum'}).reset_index()
 
 # Preparing data
-
+#data points are represented horizontally and on vertical axis to show that how one variable affect on another variable
 data = [
     go.Scatter(x=new_df['Recovered'],
                y=new_df['Unrecovered'],
