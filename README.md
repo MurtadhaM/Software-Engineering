@@ -1,4 +1,16 @@
-# ITSC-3155
+# ITSC-3155 Software Engineering
+
+                  _                      
+                 (_)                     
+  ___ _ __   __ _ _ _ __   ___  ___ _ __ 
+ / _ \ '_ \ / _` | | '_ \ / _ \/ _ \ '__|
+|  __/ | | | (_| | | | | |  __/  __/ |   
+ \___|_| |_|\__, |_|_| |_|\___|\___|_|   
+             __/ |                       
+            |___/                        
+
+
+
 Group-Project
 
 Devon Cesca's Repo: https://github.com/DevonCesca/ITSC-3155-FINAL
