@@ -15,4 +15,4 @@ https://github.com/MurtadhaM/ITSC-3155/blob/main/DesSprintDay-3/Marzouq-DesSprin
 
 https://github.com/MurtadhaM/ITSC-3155/blob/main/DesSprintDay-2/Marzouq-DesSprintDay-2/
 
-https://github.com/MurtadhaM/ITSC-3155/tree/main/Lab Activity/Murtadha
+https://github.com/MurtadhaM/ITSC-3155/tree/main/Lab%20Activity/Murtadha
