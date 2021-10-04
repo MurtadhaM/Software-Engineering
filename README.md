@@ -12,6 +12,8 @@ Parker Randolph Repo: https://github.com/XCaramellX?tab=repositories
 
 Mark Feng Repo: https://github.com/Alderheart
 
+Krish Pandya https://github.com/KPandya1/ITSC-3155-repo.git
+
 Murtadha's Files:
 
 https://github.com/MurtadhaM/ITSC-3155/blob/main/DesSprintDay-1/Marzouq-DesSprintDay-1/
