@@ -12,7 +12,10 @@ Parker Randolph Repo: https://github.com/XCaramellX?tab=repositories
 
 Mark Feng Repo: https://github.com/Alderheart
 
-Krish Pandya https://github.com/KPandya1/ITSC-3155-repo.git
+Steven Volovar Repo: https://github.com/svolovar/ITSC3155-group
+
+
+Krish Pandya Repo  https://github.com/KPandya1/ITSC-3155-repo.git
 
 Murtadha's Files:
 
