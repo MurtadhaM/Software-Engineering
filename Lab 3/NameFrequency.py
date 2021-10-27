@@ -21,9 +21,9 @@ class NameFrequency:
         data_frame = dict(data[column_name].str.split(" ", n=1, expand=True))
         self.data_frame = data_frame
         if isinstance(self.data_frame, pd.DataFrame):
+            return False
+        else:
             return True
-        return False
-
     # making separate data set column from specific data frame
     def selectingColumn(self, column_name, column_index):
         self.data_set[column_name] = self.data_frame[column_index]
