@@ -7,7 +7,7 @@
 Group-Project
 
 
-Devon Cesca's Repo: https://github.com/DevonCesca/ITSC-3155-FINAL
+Devon Cesca's Repo: https://github.com/DevonCesca/ITSC-3155-101-FINAL-PROJECT-GROUP-15
 
 Parker Randolph Repo: https://github.com/XCaramellX?tab=repositories
 
