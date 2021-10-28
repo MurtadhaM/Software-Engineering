@@ -9,6 +9,9 @@ class Invoice:
         self.items['discount'] = discount
         return self.items
 
+
+    
+
     def totalImpurePrice(self, products):
         total_impure_price = 0
         for k, v in products.items():
