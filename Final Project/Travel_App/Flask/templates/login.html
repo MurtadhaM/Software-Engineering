@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='forms.css') }}">
 </head>
 
-<body>
+<body style="background-color:gray;">
     <div>
-        <h1>Welcome {% if user %}{{user}}{% endif %} to the Traveling Dashboard!</h1>
+        <h1>Welcome {% if user %}{{user}}{% endif %} to Project Gemini!</h1>
 
         <h2>This site is the one stop for all your travel needs.</h2>
         <div class="formwrapper">
@@ -34,7 +34,7 @@
                 </div>
                 {{ form.submit }}
             </form>
-            <a href="{{ url_for('register') }}"> Register .</a>
+            <a href="{{ url_for('register') }}"> Register</a>
         </div>
     </div>
 </body>
