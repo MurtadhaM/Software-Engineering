@@ -61,7 +61,10 @@ body {
   color: #404040;
   background: #0ca3d2;
   text-align: center;
-  padding-top: 20em;
+}
+
+.loginspecificpadding {
+   padding-top: 20em;
 }
 
 .login {
