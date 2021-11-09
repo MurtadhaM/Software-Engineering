@@ -31,6 +31,9 @@ with app.app_context():
     
 # Setting up the routes
 @app.route('/')
+def home():
+    return render_template("Home.html")
+
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     login_form = LoginForm()
