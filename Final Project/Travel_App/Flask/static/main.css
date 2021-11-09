@@ -237,6 +237,7 @@ input[type=submit]:active {
 
 .nav {
   background-color: #333;
+  margin-top: -10px;
   overflow: hidden;
 }
 
@@ -274,21 +275,18 @@ input[type=submit]:active {
 
 .Travelh2 {
   color: #FFFFFF;
-  text-align: left;
   font-size: 15px;
 
 }
 
 .Travelh3 {
   color: #FFFFFF;
-  text-align: middle;
   font-size: 15px;
 
 }
 
 .Travelh4 {
   color: #FFFFFF;
-  text-align: right;
   font-size: 15px;
 
 }
