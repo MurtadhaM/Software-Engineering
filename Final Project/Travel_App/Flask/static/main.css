@@ -270,5 +270,26 @@ input[type=submit]:active {
   color: #FFFFFF;
   text-align: center;
   font-size: 40px;
+}
+
+.Travelh2 {
+  color: #FFFFFF;
+  text-align: left;
+  font-size: 15px;
 
 }
+
+.Travelh3 {
+  color: #FFFFFF;
+  text-align: middle;
+  font-size: 15px;
+
+}
+
+.Travelh4 {
+  color: #FFFFFF;
+  text-align: right;
+  font-size: 15px;
+
+}
+
