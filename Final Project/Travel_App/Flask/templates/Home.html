@@ -19,9 +19,12 @@
         <h2 class = "Homeh2">Project Gemini</h2>
             <h3 class = "Homeh3">Travel at it's Finest!</h3>
         
-        <img src="travel stock 1.jpg" alt="Get Inspired!">
-        <img src="travel stock 2.jpg" alt="Travel with Confidence!">
-        <img src="travel stock 3.jpg" alt="Explore the World!">
+        <img src="{{ url_for('static', filename='1.jpg') }}" alt="Get Inspired!">
+        <br>
+        <img src="{{ url_for('static', filename='2.jpg') }}"  width="100px" height="100px" alt="Travel with Confidence!">
+        <br>
+        <img src="{{ url_for('static', filename='3.jpg') }}" alt="Explore the World!">
+        <br>
 
         <h2 class = "Travelh2">Get Inspired!</h2>
         <h2 class = "Travelh3">Travel with Confidence!</h2>
