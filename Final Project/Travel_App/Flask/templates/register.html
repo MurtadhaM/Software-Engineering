@@ -9,6 +9,13 @@
 </head>
 
 <body>
+    <nav class="nav" style="margin-top: -10px;">
+
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{url_for('register')}}">Register</a>
+        <a href="{{url_for('login')}}">Login</a>
+
+    </nav>
     <div>
         <h1>Welcome {% if user %}{{user}}{% endif %} to the Travel Advisory App!</h1>
 

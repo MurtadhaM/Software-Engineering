@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='forms.css') }}">
 </head>
 
-<body class="loginspecificpadding">
-    
-    <div>
+<body >
+    <nav class="nav" style="margin-top: -10px;">
+
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{url_for('register')}}">Register</a>
+        <a href="{{url_for('login')}}">Login</a>
+
+    </nav>
+    <div class="loginspecificpadding">
         <h1>Welcome {% if user %}{{user}}{% endif %} to Project Gemini!</h1>
 
         <h2>This site is the one stop for all your travel needs.</h2>
