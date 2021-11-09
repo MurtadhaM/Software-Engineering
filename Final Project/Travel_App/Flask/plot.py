@@ -7,15 +7,14 @@
 # DATA SET INFORMATION:
 # https://data.humdata.org/dataset/covid-19-global-travel-restrictions-and-airline-information
 # https://databank.worldbank.org/source/2?series=ST.INT.RCPT.XP.ZS&country=&savedlg=1&l=en
+
+# Importing libraries
 import pandas as pd
 import plotly.graph_objects as go
-
+# Settinng up the plotly Source File
 df = pd.read_csv('static/Travel_Restrictions.csv')
 fig = go.Figure(go.Scatter(x = df['adm0_name'], y = df['adm0_name'],
                   name='Travel Restrictions'))
-
-
-
 # Table Data Restrictions
 fig2 = go.Figure(data=[go.Table(
     header=dict(values=[['Country'], ['Effective Data'] ],
@@ -25,21 +24,14 @@ fig2 = go.Figure(data=[go.Table(
                fill_color='lavender',
                align='left'))
 ])
-
-
-
 # Table Airline Restrictions
 fig.update_layout(title='Travel Restrictions (2021)',
                    plot_bgcolor='rgb(230, 230,230)',
                    showlegend=True)
-
-
 fig2.update_layout(title='Travel Restrictions (2021)',
                    plot_bgcolor='rgb(230, 230,230)',
                    showlegend=True)
-
-
+#Print me daddy when ran direcrly for testing
 print(fig.write_html('static/plot.html'))
-
-
+#Print me daddy when ran direcrly for testing
 print(fig2.write_html('static/table.html'))
