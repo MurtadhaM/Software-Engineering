@@ -1,44 +1,31 @@
-#######
-# IMPORT PACKAGES
-#######
+# Author: Murtadha Marzouq
+# Assignment: Reddit
+# Date: 11/9/2019
+# Thank for an awesome assignment
 
+# importing the requests library
 import praw
 import pandas as pd
 
 
-# Acessing the reddiwt api
-
+# creating the Reddit object
 
 reddit = praw.Reddit(client_id='SCCAe_MW2AQRpRyBnD9Vkw', #my client id
                      client_secret='YUCw18b32GVwqvMaWGljIG2EIZYuIw',  #your client secret
-                     user_agent='PRAW_test', #user agent name
+                     user_agent='Firebox', #user agent name
                      username = '',     # your reddit username
                      password = '')     # your reddit password
-
-# reddit = praw.Reddit(client_id='IxcfGusFJcBM05qIHFj7_g',
-#                      client_secret='0iou0P1Iv-Uncf0qKjR2ZQCWBkrH7w',
-#                      user_agent='PRAW_test')
+# creating the subreddit object
 
 sub = ['Askreddit']  # make a list of subreddits you want to scrape the data from
 print(reddit)
 
- 
+ # creating the subreddit object
 
 for s in sub:
     subreddit = reddit.subreddit(s)   # Choosing the subreddit
-
-
-########################################
-#   CREATING DICTIONARY TO STORE THE DATA WHICH WILL BE CONVERTED TO A DATAFRAME
-########################################
-
-#   NOTE: ALL THE POST DATA AND COMMENT DATA WILL BE SAVED IN TWO DIFFERENT
-#   DATASETS AND LATER CAN BE MAPPED USING IDS OF POSTS/COMMENTS AS WE WILL 
-#   BE CAPTURING ALL IDS THAT COME IN OUR WAY
-
-# SCRAPING CAN BE DONE VIA VARIOUS STRATEGIES {HOT,TOP,etc} we will go with keyword strategy i.e using search a keyword
-    query = ['antivax']
-
+    query = ['food']
+    # creating the submission object
     for item in query:
         post_dict = {
             "title" : [],
@@ -49,13 +36,15 @@ for s in sub:
             "created" : [],
             "body" : []
         }
+        # getting the top 100 posts
         comments_dict = {
             "comment_id" : [],
             "comment_parent_id" : [],
             "comment_body" : [],
             "comment_link_id" : []
         }
-        for submission in subreddit.search(query,sort = "top",limit = 100):
+        # getting the top 100 posts
+        for submission in subreddit.search(query,sort = "top",limit = 5):
             post_dict["title"].append(submission.title)
             post_dict["score"].append(submission.score)
             post_dict["id"].append(submission.id)
@@ -65,15 +54,15 @@ for s in sub:
             post_dict["body"].append(submission.selftext)
             
             ##### Acessing comments on the post
-            submission.comments.replace_more(limit = 100)
+            submission.comments.replace_more(limit = 5)
             for comment in submission.comments.list():
                 comments_dict["comment_id"].append(comment.id)
                 comments_dict["comment_parent_id"].append(comment.parent_id)
                 comments_dict["comment_body"].append(comment.body)
                 comments_dict["comment_link_id"].append(comment.link_id)
-        
+        # creating the dataframe
         post_comments = pd.DataFrame(comments_dict)
-
-        post_comments.to_csv(s+"_comments_"+ item +"subreddit.csv")
+        # creating the dataframe again
+        post_comments.to_csv(s+"_comments_"+ item +"output.csv")
         post_data = pd.DataFrame(post_dict)
-        post_data.to_csv(s+"_"+ item +"subreddit.csv")
+        post_data.to_csv(s+"_"+ item +"output.csv")
