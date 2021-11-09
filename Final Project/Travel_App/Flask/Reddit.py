@@ -44,7 +44,7 @@ for s in sub:
             "comment_link_id" : []
         }
         # getting the top 100 posts
-        for submission in subreddit.search(query,sort = "top",limit = 5):
+        for submission in subreddit.search(query,sort = "top",limit = 6):
             post_dict["title"].append(submission.title)
             post_dict["score"].append(submission.score)
             post_dict["id"].append(submission.id)
@@ -54,7 +54,7 @@ for s in sub:
             post_dict["body"].append(submission.selftext)
             
             ##### Acessing comments on the post
-            submission.comments.replace_more(limit = 5)
+            submission.comments.replace_more(limit = 6)
             for comment in submission.comments.list():
                 comments_dict["comment_id"].append(comment.id)
                 comments_dict["comment_parent_id"].append(comment.parent_id)
