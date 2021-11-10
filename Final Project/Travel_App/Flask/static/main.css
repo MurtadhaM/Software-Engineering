@@ -238,6 +238,7 @@ input[type=submit]:active {
 .nav {
   background-color: #333;
   margin-top: -10px;
+  padding-left:40%;
   overflow: hidden;
 }
 
