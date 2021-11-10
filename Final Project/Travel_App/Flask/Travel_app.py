@@ -67,7 +67,7 @@ def logout():
 def register():
     form = RegisterForm()
 
-    if request.method == 'POST' and form.validate_on_submit():
+    if request.method == 'POST' or request.method == 'GET' and form.validate_on_submit():
         # salt and hash password
         h_password = bcrypt.hashpw(
             request.form['password'].encode('utf-8'), bcrypt.gensalt())
