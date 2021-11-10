@@ -238,8 +238,10 @@ input[type=submit]:active {
 .nav {
   background-color: #333;
   margin-top: -10px;
-  padding-left:40%;
+  padding-left:45%;
   overflow: hidden;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 .nav a{
@@ -294,7 +296,7 @@ input[type=submit]:active {
 
 .desc1{
  color: #FFFFFF;
- font-size: 30px;
+ font-size: 20px;
 
 }
 
