@@ -34,6 +34,12 @@ with app.app_context():
 def home():
     return render_template("Home.html")
 
+
+# Setting up the routes
+@app.route('/parners')
+def partners():
+    return render_template("partners.html")
+
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     login_form = LoginForm()
