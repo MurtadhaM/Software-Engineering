@@ -11,24 +11,16 @@ def invoice():
     invoice = Invoice()
     return invoice
 
-def test_CanCalculateTotalImpurePrice(products):
+def test_Can_User_Login(products):
     invoice = Invoice()
     invoice.totalImpurePrice(products)
     assert invoice.totalImpurePrice(products) == 75
 
-def test_CanCalculateTotalDiscount(invoice, products):
+def test_Can_User_Register(invoice, products):
     invoice.totalDiscount(products)
     assert invoice.totalDiscount(products) == 5.62
 
-def test_CanCalculateTotalPurePrice(invoice, products):
-    invoice.totalPurePrice(products)
-    assert invoice.totalPurePrice(products) == 69.38
-    
-def test_CanCalculateTotalPurePrice_Average_Feature(invoice, products):
-    invoice.totalPurePrice(products)
-    assert invoice.totalPurePrice(products) == 69.38
-    
-def test_CanCalculateTotalPurePrice_Remove_Feature(invoice, products):
+def test_Can_User_View_Home(invoice, products):
     invoice.totalPurePrice(products)
     assert invoice.totalPurePrice(products) == 69.38
     
