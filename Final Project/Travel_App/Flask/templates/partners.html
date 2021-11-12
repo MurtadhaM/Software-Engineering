@@ -8,6 +8,12 @@
 
 </head>
 <style>
+
+  body  {
+    background-image: url("/static/3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }  
     * {
       box-sizing: border-box;
     }
@@ -27,6 +33,9 @@
     footer{
         margin-top: 40px;
 
+    }
+    .Homeh2, .Homeh3, h2{
+        color: green;
     }
     </style>
 <body>
@@ -54,7 +63,7 @@
         </div>
         <div class="column">
             <h2>World Bank Open Data</h2>
-            <img src="{{ url_for('static', filename='5.png') }}"  width="127%" height="30%" align="top" style=" margin-right: 15px; margin-top: 50px; margin-left: -30px" alt="Travel with Confidence!">
+            <img src="{{ url_for('static', filename='5.png') }}"  width="127%" height="30%" align="top" style="margin-right: 0px; margin-top: 50px; margin-left: 0px; background-color: white" alt="Travel with Confidence!">
         </div>
        
       </div>
