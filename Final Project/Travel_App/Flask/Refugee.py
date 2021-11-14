@@ -10,8 +10,8 @@ import pandas as pd
 import plotly.offline as pyo
 import plotly.graph_objs as go
 
-# Read in the data
-df = pd.read_csv('Refugees.csv')
+# Read in the data 
+df = pd.read_csv('Refugees.csv') 
 # print(df.head())
 df['Year'] = pd.to_datetime(df['Year'], format = '%Y') # %Y filters only the year
 df = df[(df['Year'] == "2020")]
