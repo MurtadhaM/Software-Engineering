@@ -33,7 +33,7 @@
                     </ul>
                     {% endif %}
                 </div>
-                <div class="form-field">{{ form.password.label }} {{ form.password }} {% if form.password.errors %}
+                <div class="form-field" style="margin-left:-0.3em;">{{ form.password.label }} {{ form.password }} {% if form.password.errors %}
                     <ul class="errors">
                         {% for error in form.password.errors %}
                         <li>{{ error }}</li>
@@ -43,7 +43,7 @@
                 </div>
                 {{ form.submit }}
             </form>
-            <a href="{{ url_for('register') }}"> Register</a>
+            <a href="{{ url_for('register') }}" class="reg"> Register</a>
         </div>
     </div>
 </body>
