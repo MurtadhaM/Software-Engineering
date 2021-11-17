@@ -201,7 +201,7 @@ input[type=text]:focus, input[type=password]:focus {
   outline-offset: 0;
 }
 
-input[type=submit], .reg {
+input[type=submit], .reg , input[type=button]{
   padding: 0 18px;
   height: 29px;
   font-size: 12px;
@@ -247,6 +247,7 @@ input[type=submit]:active {
 /* Links inside the navbar */
 .nav a {
   float: left;
+	
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -265,6 +266,9 @@ input[type=submit]:active {
     color: #231F20;
 }
 
+.nav {
+padding-left: 45%;
+}
 .Homeh2 {
   color: #FFFFFF;
   text-align: center;
