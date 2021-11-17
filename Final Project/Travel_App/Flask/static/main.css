@@ -237,31 +237,27 @@ input[type=submit]:active {
 }
 
 .nav {
-  background-color: #333;
-  margin-top: -10px;
-  padding-left: 59em;
   overflow: hidden;
-  margin-left: -10px;
-  margin-right: -10px;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
 }
 
-.nav a{
+/* Links inside the navbar */
+.nav a {
   float: left;
+  display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
 
+/* Change background on mouse-over */
 .nav a:hover {
-  background-color: #ddd;
+  background: #ddd;
   color: black;
-}
-
-.nav a.active {
-  background-color: #C5C5C5;
-  color: white;
 }
 
 .Homeh2 {
