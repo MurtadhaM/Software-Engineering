@@ -6,6 +6,19 @@
 <title>Traveler Profile</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 
+<style>
+
+
+td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+  }
+  th {
+    background: lightblue;
+    border-color: white;
+  }
+  
+</style>
 <body>
     <nav class="nav" style="margin-top: -10px;margin-left: -10px;margin-right: -10px;">
         <a href="{{ url_for('index') }}">Dashboard</a>
@@ -14,8 +27,8 @@
 
     </nav>
     <div class="body">
-        <h2>Profile</h2>
-        <table>
+        <h1>Profile</h1>
+        <table align="center">
             <tr>
                 <th>First name</th>
                 <th>Last Name</th>
