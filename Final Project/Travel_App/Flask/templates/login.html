@@ -12,7 +12,7 @@
     <nav class="nav" style="margin-top: -10px;margin-left: -10px;margin-right: -10px;">
 
         <a href="{{ url_for('home') }}">Home</a>
-        <a href="{{url_for('register')}}">Register</a>
+<!--        <a href="{{url_for('register')}}">Register</a>-->
         <a class = "current" href="{{url_for('login')}}">Login</a>
         <a href="{{url_for('partners')}}">Our Partners</a>
 
@@ -43,7 +43,7 @@
                 </div>
                 {{ form.submit }}
             </form>
-            <a href="{{ url_for('register') }}" class="reg"> Register</a>
+            <input id="submit" name="submit" type="submit" value="Register" onclick="window.location.href = 'http://127.0.0.1:5000/register';">
         </div>
     </div>
 </body>

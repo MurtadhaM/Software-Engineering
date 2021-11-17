@@ -13,9 +13,9 @@
     <nav class="nav" style="margin-top: -10px;margin-left: -10px;margin-right: -10px;">
 
         <a href="{{ url_for('home') }}">Home</a>
-        <a class = "current" href="{{url_for('register')}}">Register</a>
         <a href="{{url_for('login')}}">Login</a>
         <a href="{{url_for('partners')}}">Our Partners</a>
+        <a class = "current" href="{{url_for('register')}}">Register</a>
 
 
     </nav>
@@ -26,7 +26,7 @@
         <h1>Project Gemini Registration</h1>
 
         <h2>The Travel Advisory Site </h2>
-        <div class="formwrapper id=" formwrapper ">
+        <div class="formwrapper id=" formwrapper>
             <h2 class="title">Register Below:</h2>
             <form method="POST " action="/register ">
                 <div class="form-field " style = "margin-left: -5em;">{{ form.firstname.label }} {{ form.firstname }} {% if form.firstname.errors %}
