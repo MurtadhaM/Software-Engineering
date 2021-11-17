@@ -15,25 +15,21 @@
     </nav>
     <div class="body">
         <h2>Profile</h2>
-        <img src="{{ url_for('static', filename='6.png') }}">
+        <br><br><br><br>
         <table>
             <tr>
-                <th>First name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-
-                <th>Date Joined</th>
+                <th class="row2"><img src="{{ url_for('static', filename='6.png') }}"><br><br>Profile</th>
             </tr>
-            {% if user %}
             <tr>
-                <td>{{ user.first_name }}</a>
-                </td>
-                <td>{{ user.last_name }}</td>
-                <td>{{ user.email }}</td>
-                <td>{{ user.registered_on }}</td>
+                <td class="row1">{{ user.first_name }}</td>
+            </tr>
+            <tr>
+                <td class="row2">{{ user.email }}</td>
+            </tr>
+            <tr>
+                <td class="row1">{{ user.registered_on }}</td>
             </tr>
         </table>
-        {% endif %}
     </div>
 </body>
 

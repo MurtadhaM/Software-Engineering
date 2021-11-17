@@ -308,14 +308,12 @@ input[type=submit]:active {
 
 * {
       box-sizing: border-box;
-    }
-
+}
 .column {
       float: left;
       width: 33.33%;
       padding: 5px;
     }
-
     /* Clearfix (clear floats) */
 .row::after {
       content: "";
@@ -326,3 +324,14 @@ footer{
         margin-top: 40px;
 
     }
+table, th, td {
+  border:1px solid black;
+  background: white;
+  margin-left:auto;
+  margin-right:auto;
+}
+.row2 {
+}
+.row1 {
+ background: #dedcdc;
+}
