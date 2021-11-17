@@ -241,7 +241,7 @@ input[type=submit]:active {
   background-color: #333;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  width: 105%; /* Full width */
 }
 
 /* Links inside the navbar */
@@ -258,6 +258,11 @@ input[type=submit]:active {
 .nav a:hover {
   background: #ddd;
   color: black;
+}
+
+.nav .current {
+    background-color: #D3D3D3;
+    color: #231F20;
 }
 
 .Homeh2 {
