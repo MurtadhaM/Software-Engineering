@@ -201,7 +201,7 @@ input[type=text]:focus, input[type=password]:focus {
   outline-offset: 0;
 }
 
-input[type=submit] , input[type=button] {
+input[type=submit], .reg {
   padding: 0 18px;
   height: 29px;
   font-size: 12px;
@@ -236,33 +236,33 @@ input[type=submit]:active {
   line-height: 34px;
 }
 
-
 .nav {
-  background-color: #333;
-  margin-top: -10px;
-  padding-left:45%;
   overflow: hidden;
-  margin-left: -10px;
-  margin-right: -10px;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 105%; /* Full width */
 }
 
-.nav a{
+/* Links inside the navbar */
+.nav a {
   float: left;
+  display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
 
+/* Change background on mouse-over */
 .nav a:hover {
-  background-color: #ddd;
+  background: #ddd;
   color: black;
 }
 
-.nav a.active {
-  background-color: #C5C5C5;
-  color: white;
+.nav .current {
+    background-color: #D3D3D3;
+    color: #231F20;
 }
 
 .Homeh2 {
@@ -306,3 +306,32 @@ input[type=submit]:active {
     margin-top: 2em;
 }
 
+* {
+      box-sizing: border-box;
+}
+.column {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+    /* Clearfix (clear floats) */
+.row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+footer{
+        margin-top: 40px;
+
+    }
+table, th, td {
+  border:1px solid black;
+  background: white;
+  margin-left:auto;
+  margin-right:auto;
+}
+.row2 {
+}
+.row1 {
+ background: #dedcdc;
+}
