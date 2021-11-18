@@ -19,6 +19,7 @@ import os  # os is used to get environment variables IP & PORT
 from flask import Flask, render_template
 
 app = Flask(__name__) 
+app.debug = True
 # Setting up the database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///Travel_app.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -29,6 +30,7 @@ db.init_app(app)
 with app.app_context():
     db.create_all()  
     
+
 # Setting up the routes
 @app.route('/')
 def home():
@@ -73,11 +75,11 @@ def logout():
 def register():
     form = RegisterForm()
 
-    if request.method == 'POST' or request.method == 'GET' and form.validate_on_submit():
+    if request.method == 'POST'  and form.validate() :
         # salt and hash password
         h_password = bcrypt.hashpw(
             request.form['password'].encode('utf-8'), bcrypt.gensalt())
-        # get entered user data
+        # h_password = request.form['password']
         first_name = request.form['firstname']
         last_name = request.form['lastname']
         # create user model
@@ -88,6 +90,8 @@ def register():
         session['user'] = first_name
         session['user_id'] = new_user.id
         return redirect(url_for('index'))
+    else:
+        return render_template("register.html", form=form)
 
     return render_template('register.html', form=form)
 
