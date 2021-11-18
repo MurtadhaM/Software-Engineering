@@ -8,6 +8,8 @@
     <!-- styles -->
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 </head>
+<style>
+</style>
 
 <body>
     <nav class="nav" style="margin-top: -10px;margin-left: -10px;margin-right: -10px;">
@@ -19,18 +21,26 @@
 
     <div class="body">
         <h1>Dashboard</h1>
+        <main>
         <br><br>
-        <h2>Travel Restriction</h2> 
-        <embed src="{{ url_for('static', filename='table.html') }}" width="800" height="600"></embed>
+        <h2>World Regions Interactive Map</h2> 
+        <embed src="{{ url_for('static', filename='Regions.html') }}" width="800" height="600">
         <h2> Refugee Data </h2>
-        <embed src="{{ url_for('static', filename='Refugees.html') }}" width="900" height="600"></embed>
+        <embed src="{{ url_for('static', filename='Refugees.html') }}" width="900" height="600">
+
+        <h2>Travel Restriction</h2> 
+        <embed src="{{ url_for('static', filename='table.html') }}" width="800" height="600">
+
+            <h2>Travel Bans By County</h2> 
+
+            <iframe src="https://ourworldindata.org/explorers/co2?tab=map&facet=none&country=CHN~USA~IND~GBR~OWID_WRL&Gas=CO%E2%82%82&Accounting=Production-based&Fuel=Total&Count=Per+capita&hideControls=true" loading="lazy" width="800px"; height="600px"></iframe>
 
         <h2>Poverty Levels </h2>
         <iframe frameBorder='no' src='https://databank.worldbank.org/embed/Development/id/d97f4f16?ti=y&ds=n&dd=y&tb=y&sh=y&dw=y&pr=y&inf=y&zm=y&md=y&navigator=n&theme=darkGrey&bdrClr=rgb(68,68,68)&bdrStyle=solid&bdrWidth=0px&title=Arial;14px;true;false;rgb(68,68,68);justify&exptypes=Excel,CSV,TabbedTxt'
             width="800" height="425"></iframe>
+        
 
-
-
+        </main>
     </div>
 </body>
 
