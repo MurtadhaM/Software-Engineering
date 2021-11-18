@@ -16,7 +16,7 @@ To run the project:
 Prerequisites: 
 You need to hash flask and other libraries installed by typing (Will add requirements.txt to allow for pip install -r requirements.txt):
 
-pip install flask bcrypt pandas plotly  wtforms flask_wtf flask_sqlalchemy
+pip install flask bcrypt pandas plotly  wtforms flask_wtf flask_sqlalchemy   email-validator
 
 
 Setting up Flask and Running: 
