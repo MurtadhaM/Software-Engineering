@@ -1,3 +1,0 @@
-1. Correcting Registration Form
-2. Adding 2 Additional DataSets 
-3. Wait to collect an A
