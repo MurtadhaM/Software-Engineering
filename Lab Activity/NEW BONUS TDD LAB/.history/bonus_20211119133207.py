@@ -28,7 +28,7 @@ def barchart():
 def stacked():
     return render_template("Home.html", value="stacked.html")
 
-# Handling the line     graph
+# Handling the line    
 
 @app.route('/line')
 def line():

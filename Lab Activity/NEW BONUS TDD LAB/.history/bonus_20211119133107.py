@@ -23,12 +23,12 @@ def barchart():
     return render_template("Home.html", value="barchart.html")
     
     
-# Handling the stacked graph    
+# Handling the Stacked Graph    
 @app.route('/stacked')
 def stacked():
     return render_template("Home.html", value="stacked.html")
 
-# Handling the line     graph
+# Handling the Stacked Graph    
 
 @app.route('/line')
 def line():
@@ -46,6 +46,7 @@ def multi():
 def bubble():
     return render_template("Home.html", value="bubble.html")
 
+# Handling the Stacked Graph    
 # Handling the Stacked Graph    
 
 @app.route('/heatmap')

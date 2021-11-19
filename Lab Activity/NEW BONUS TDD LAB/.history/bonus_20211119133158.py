@@ -23,12 +23,12 @@ def barchart():
     return render_template("Home.html", value="barchart.html")
     
     
-# Handling the stacked graph    
+# Handling the Stacked Graph    
 @app.route('/stacked')
 def stacked():
     return render_template("Home.html", value="stacked.html")
 
-# Handling the line     graph
+# Handling the line    
 
 @app.route('/line')
 def line():
