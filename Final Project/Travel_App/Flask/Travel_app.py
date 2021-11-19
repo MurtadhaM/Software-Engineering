@@ -29,6 +29,15 @@ db.init_app(app)
 with app.app_context():
     db.create_all()  
     
+
+# TESTING
+
+@app.route('/test')
+def test():
+    return render_template("test.html")
+
+
+
 # Setting up the routes
 @app.route('/')
 def home():
