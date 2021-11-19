@@ -14,6 +14,8 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 # Setting up the database
+
+
 # TESTING
 @app.route('/')
 @app.route('/barchart')
