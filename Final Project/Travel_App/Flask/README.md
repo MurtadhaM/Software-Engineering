@@ -30,6 +30,8 @@ Devon Cesca</li>
  <h2>
  <b>Note: <b>The app is setup to run on localhost port 5000 so to access the application:
   <br>
+    <b>Note: <b>pip3 install -r requirements.txt works now:
+  <br>
 
 in your browser type the following URL:<b>
 http://127.0.0.1:5000/
