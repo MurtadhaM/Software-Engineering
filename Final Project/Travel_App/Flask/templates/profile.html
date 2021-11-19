@@ -35,8 +35,8 @@ td, th {
                 <th>Email</th>
                 <th>Date Joined</th>
             </tr>
-            {% if user %}
             <tr>
+                <td> <img src="{{ url_for('static', filename='6.png')}}"></td>
                 <td>{{ user.first_name }}</a>
                 </td>
                 <td>{{ user.last_name }}</td>
@@ -44,8 +44,6 @@ td, th {
                 <td>{{ user.registered_on }}</td>
             </tr>
         </table>
-        {% endif %}
     </div>
 </body>
-
 </html>
