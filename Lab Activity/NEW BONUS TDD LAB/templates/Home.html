@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+</head>
+<style>
+.nav{
+    text-align: center
+}
+    </style>
+<body>
+    <header>
+    <nav class="nav" style="margin-top: -10px;margin-left: -10px;margin-right: -10px; padding-left: 25%;">
+        <a href="{{ url_for('barchart') }}">interactive barchart</a>
+       <a href="{{url_for('barchart')}}">barchart</a>
+        <a href="{{url_for('stacked')}}">stacked bar chart   </a>
+        <a href="{{url_for('line')}}">line-chart        </a>
+        <a href="{{url_for('multi')}}">multi line chart        </a>
+
+        <a href="{{url_for('bubble')}}">bubble chart        </a>
+        <a href="{{url_for('heatmap')}}">heatmap        </a>
+       
+    </nav>
+</header>
+
+<main>
+<br>
+<br>
+<iframe src=static/{{ value }} width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+</main>
+<footer style="margin-top: 100px;">
+
+    <p>Copyright &copy; 2021 Bonus</p>
+</footer>
+</body>
+</html>
