@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4dd6977c-91ee-4099-ac1f-3395aead8c93" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Final Project/Travel_App/Flask/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Final Project/Travel_App/Flask/templates/register.html" afterDir="false" />
-    </list>
+    <list default="true" id="4dd6977c-91ee-4099-ac1f-3395aead8c93" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
