@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact us </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='forms.css') }}">
+</head>
+
+<body >
+    <nav class="nav" style="margin-top: -10px;margin-left: -10px;margin-right: -10px;">
+
+        <a href="{{ url_for('home') }}">Home</a>
+        <a class = "current" href="{{url_for('login')}}">Login</a>
+        <a href="{{url_for('partners')}}">Our Partners</a>
+
+
+    </nav>
+    <h1>Contact US</h1>
+      {% block content %}
+<div class="contact">
+    <h3>Contact us</h3><!-- Just here i use "url_for" to call the function get_contact.
+         This function return the html code of our contact page-->
+    <form action="{{ url_for('contact') }}" method=post>
+        <div>
+            <!-- name forms -->
+            <p>
+                {{ form.name.label }} <br>
+                {{ form.name(placeholder='Your name') }}
+            </p>
+            <!-- email forms -->
+            <p>
+                {{ form.email.label }} <br>
+                {{ form.email(placeholder='Your e-mail ...') }}
+            </p>
+            <!-- Subject of your request -->
+            <p>
+                {{ form.subject.label }}<br>
+                {{form.subject(placeholder='Your subject ...')}}
+            </p>
+            <!-- Content of your request -->
+            <p>
+                {{ form.message.label }}<br>
+                {{ form.message(placeholder='write your request ...') }}
+            </p>
+            <!-- Submit button -->
+            <p>
+                {{ form.submit }}
+            </p>
+        </div>
+    </form>
+</div>{% endblock %}
+</body>
+
+<footer>
+    <p>This is a WIP and does not entirely portray any opinions. That is to be said, <b>do not take our advice.</b></p>
+</footer>
+
+</html>
+<!--
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<div class="login">
+  <h1>Login to Web App</h1>
+       <form method="POST" action="/login">
+                <div class="form-field">{{ form.email.label }} {{ form.email }} {% if form.email.errors %}
+                    <ul class="errors">
+                        {% for error in form.email.errors %}
+                        <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+    <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
+    <p><input type="password" name="password" value="" placeholder="Password"></p>
+    <p class="remember_me">
+      <label>
+        <input type="checkbox" name="remember_me" id="remember_me">
+        Remember me on this computer
+      </label>
+    </p>
+    <p class="submit"><input type="submit" name="commit" value="Login"></p>
+  </form>
+</div>
+
+<div class="login-help">
+  <p>Forgot your password? <a href="{{ url_for('register') }}">Click here to reset it</a>.</p>
+</div>-->
