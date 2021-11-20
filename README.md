@@ -35,7 +35,7 @@ Devon Cesca</li>
 
 in your browser type the following URL:<b>
 http://127.0.0.1:5000/
-    <b>Note: <b>```pip3 install requirements.txt ```j also works:
+    <b>Note: <b>```pip3 install requirements.txt '''j also works:
   <br>
 
 in your browser type the following URL:<b>
