@@ -3,8 +3,7 @@
 # Group: 15 
 # Assignment: Final Project
 from flask_wtf import FlaskForm
-from wtforms.fields.simple import TextAreaField, SubmitField
-TextField = TextAreaField
+from wtforms import TextField, TextAreaField, SubmitField
 class ContactForm(FlaskForm):
     name = TextField("Name")
     email = TextField("Email")

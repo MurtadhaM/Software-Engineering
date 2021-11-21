@@ -16,6 +16,7 @@ from forms import LoginForm
 from forms import RegisterForm
 from flask_wtf import FlaskForm
 import bcrypt
+
 from flask import request
 from flask import session
 from models import User as User

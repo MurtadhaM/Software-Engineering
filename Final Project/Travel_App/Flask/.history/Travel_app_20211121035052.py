@@ -4,7 +4,6 @@
 # Assignment: Final Project
 from flask_wtf import FlaskForm
 from wtforms.fields.simple import TextAreaField, SubmitField
-TextField = TextAreaField
 class ContactForm(FlaskForm):
     name = TextField("Name")
     email = TextField("Email")

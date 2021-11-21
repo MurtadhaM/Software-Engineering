@@ -3,7 +3,7 @@
 # Group: 15 
 # Assignment: Final Project
 from flask_wtf import FlaskForm
-from wtforms.fields.simple import TextAreaField, SubmitField
+from wtforms import  TextAreaField, SubmitField
 TextField = TextAreaField
 class ContactForm(FlaskForm):
     name = TextField("Name")
@@ -15,7 +15,8 @@ class ContactForm(FlaskForm):
 from forms import LoginForm
 from forms import RegisterForm
 from flask_wtf import FlaskForm
-import bcrypt
+import bcrypt #for hashing passwords
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from flask import request
 from flask import session
 from models import User as User
