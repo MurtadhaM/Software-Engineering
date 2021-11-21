@@ -1,3 +1,5 @@
+email_validator
+wtforms==2.3.3
 Flask
 nest_asyncio
 Flask_SQLAlchemy

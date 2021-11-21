@@ -10,14 +10,14 @@ from flask import url_for
 from database import db
 from models import User as User
 from flask import session
+import bcrypt 
 from flask import request
-import bcrypt # bcrypt is used to hash passwords
 from forms import RegisterForm
 from forms import LoginForm
 from flask_wtf import FlaskForm
+
 from wtforms.fields.simple import TextAreaField, SubmitField
 TextField = TextAreaField
-
 
 class ContactForm(FlaskForm):
     name = TextField("Name")
@@ -76,8 +76,7 @@ def login():
             email=request.form['email']).one()
         # Checking if the password is correct
         saltp = bcrypt.gensalt(14)
-        hashp = bcrypt.hashpw(request.form['password'].encode(
-            'utf-8'), bcrypt.gensalt(14))
+        hashp = bcrypt.hashpw(request.form['password'].encode('utf-8') , bcrypt.gensalt(14))
 
         # if bcrypt.checkpw(request.form['password'].encode('utf-8'), the_user.password):
         if bcrypt.checkpw(request.form['password'].encode('utf-8'), the_user.password.encode('utf-8')):
