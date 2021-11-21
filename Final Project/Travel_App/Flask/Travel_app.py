@@ -1,33 +1,35 @@
 # Author: Murtadha Marzouq
 # Date: 2020-11-24
-# Group: 15 
+# Group: 15
 # Assignment: Final Project
+from flask import Flask, render_template
+import os  # os is used to get environment variables IP & PORT
+from flask import render_template
+from flask import redirect
+from flask import url_for
+from database import db
+from models import User as User
+from flask import session
+from flask import request
+import bcrypt # bcrypt is used to hash passwords
+from forms import RegisterForm
+from forms import LoginForm
 from flask_wtf import FlaskForm
 from wtforms.fields.simple import TextAreaField, SubmitField
 TextField = TextAreaField
+
+
 class ContactForm(FlaskForm):
     name = TextField("Name")
     email = TextField("Email")
     subject = TextField("Subject")
     message = TextAreaField("Message")
     submit = SubmitField("Send")
-#importing the necessary libraries (Death by a thousand cuts)
-from forms import LoginForm
-from forms import RegisterForm
-from flask_wtf import FlaskForm
-import bcrypt
-from flask import request
-from flask import session
-from models import User as User
-from database import db
-from flask import url_for
-from flask import redirect
-from flask import request
-from flask import render_template
-import os  # os is used to get environment variables IP & PORT
-from flask import Flask, render_template
 
-app = Flask(__name__) 
+# importing the necessary libraries (Death by a thousand cuts)
+
+
+app = Flask(__name__)
 # Setting up the database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///Travel_app.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -36,8 +38,9 @@ app.config["IMAGE_UPLOADS"] = "static"
 # Initializing the database (Death by a thousand cuts)
 db.init_app(app)
 with app.app_context():
-    db.create_all()  
-    
+    db.create_all()
+
+
 @app.route('/contact', methods=['POST', 'GET'])
 def contact():
     contact = ContactForm()
@@ -46,10 +49,10 @@ def contact():
     return render_template("contact.html", form=contact)
 # TESTING
 
+
 @app.route('/test')
 def test():
     return render_template("test.html")
-
 
 
 # Setting up the routes
@@ -63,6 +66,7 @@ def home():
 def partners():
     return render_template("partners.html")
 
+
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     login_form = LoginForm()
@@ -72,8 +76,9 @@ def login():
             email=request.form['email']).one()
         # Checking if the password is correct
         saltp = bcrypt.gensalt(14)
-        hashp = bcrypt.hashpw(request.form['password'].encode('utf-8'), bcrypt.gensalt(14)) 
-        
+        hashp = bcrypt.hashpw(request.form['password'].encode(
+            'utf-8'), bcrypt.gensalt(14))
+
         # if bcrypt.checkpw(request.form['password'].encode('utf-8'), the_user.password):
         if bcrypt.checkpw(request.form['password'].encode('utf-8'), the_user.password.encode('utf-8')):
             session['user'] = the_user.first_name
@@ -87,6 +92,8 @@ def login():
         return render_template("login.html", form=login_form)
 
 # Loging out user
+
+
 @app.route('/logout')
 def logout():
     if session.get('user'):
@@ -119,6 +126,8 @@ def register():
     return render_template('register.html', form=form)
 
 # routing to the index page
+
+
 @app.route('/index')
 def index():
     if session.get('user'):
@@ -127,6 +136,8 @@ def index():
         return redirect(url_for('login'))
 
 # routing user profile page (not yet completely implemented)
+
+
 @app.route('/profile/userID')
 def profile():
     # insert code
