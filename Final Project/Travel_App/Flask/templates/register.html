@@ -13,12 +13,18 @@
     
 </head>
 <style>
-    .errors {
+    .form-field{
+    }
+    .login{
+        width: 45%;
+        font-size: 15px;
+    }
+    .error{
         color: red;
     }
-    
 
 </style>
+
 <body>
 <nav class="nav" style="margin-top: -10px;margin-left: -10px;margin-right: -10px;">
 
@@ -32,12 +38,12 @@
 <div>
     <br>
     <br>
-   
-    <div class="formwrapper" id="formwrapper">
+    <h1>The Travel Advisory Site </h1> 
+    <h2 class="title">Register </h2>
+
+    <div class="login" id="formwrapper">
         <h1>Project Gemini Registration</h1>
-    <h1>Welcome</h1>
-    <h2>The Travel Advisory Site </h2> <h2 class="title">Register Below:</h2>
-        <form method="POST" action="/register">
+        <form method="POST" class="field" action="/register">
             <div class="form-field" style="margin-left: -5em;">{{ form.firstname.label }} {{ form.firstname }}
                 {% if form.firstname.errors %}
                 <ul class="errors">
@@ -84,10 +90,11 @@
                 </ul>
                 {% endif %}
             </div>
-            {{ form.submit }}
+            <button  style="width:10em; margin-left:3em" class="button  is-info     rounded" type="submit"   >Register</button>
         </form>
-        <h3> By completing this registration, you will be granted access to superior insights that other travelers would
-            wish to have!</h3>
+            <p style="color:orange; background:transparent">By completing this registration, you will be granted access to superior insights that other travelers would
+                wish to have! <b>Welcome!</b></p>
+
 
     </div>
 </div>

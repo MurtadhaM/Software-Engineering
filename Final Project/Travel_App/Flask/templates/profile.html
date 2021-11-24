@@ -8,19 +8,40 @@
 <title>Traveler Profile</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
 <style>
 
+.form-field{
+    font-size: 2.2em;
+}
+.title{
+    font-size: 2.2em;
+}
 
-td, th {
-    border: 1px solid #999;
-    padding: 0.5rem;
-  }
-  th {
-    background: lightblue;
-    border-color: white;
-  }
-  
+img{
+    margin:0;
+    padding:0;
+    width:250px;
+    background: red;
+    height: 300px;
+    width: 250px;
+    border-radius: 150px;
+    margin: 20px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
 
+}
+figure{
+}
+.login{
+    width: 50%;
+    text-align:center
+}
 </style>
 
 <body>
@@ -30,25 +51,33 @@ td, th {
     <a href="{{url_for('logout')}}">Logout</a>
 
 </nav>
-<div class="body" style="margin-top:5em">
-    <h1>Profile</h1>
-    <table align="center">
-        <tr>
-            <th>Profile Picture</th>
-            <th>First name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Date Joined</th>
-        </tr>
-        <tr>
-            <td><img src="{{ url_for('static', filename='6.png')}}"></td>
-            <td>{{ user.first_name }}</a>
-            </td>
-            <td>{{ user.last_name }}</td>
-            <td>{{ user.email }}</td>
-            <td>{{ user.registered_on }}</td>
-        </tr>
-    </table>
+<h1 class="title" style="font-size:4.2em; text-align:center">Account Information</h1>
+<div class="login">
+    <div class="box">
+        <figure class=" ">
+            <img class="" src="https://data.whicdn.com/images/322027365/original.jpg?t=1541703413"  >
+        </figure>
+    <div  class="field">
+        <div class="form-field" id="form-field"> <b>First Name:</b>  {{ user.first_name }}
+        </div>
+        </div>
+        <div  class="field">
+            <div class="form-field" id="form-field"> <b>Last Name:</b> {{ user.last_name }}
+            </div>
+            </div>
+            <div  class="field">
+                <div class="form-field" id="form-field"><b>Email:</b>  {{ user.email }}
+                </div>
+                </div>
+                <div  class="field">
+                    <div class="form-field" id="form-field"><b>Date Registered:</b>  {{ user.registered_on }}
+                    </div>
+                    </div>
+
+
+        
+        
+    </div>
 </div>
 </body>
 

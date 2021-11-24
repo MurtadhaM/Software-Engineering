@@ -23,36 +23,31 @@
 
 
 </nav>
-<h1>Contact Us</h1>
+<h1 class="title">Contact Us</h1>
 {% block content %}
-<div class="contact" style="margin-top: 10em">
-    <h3>Contact us</h3><!-- Just here i use "url_for" to call the function get_contact.
+<div class="login" style="">
+    <h1>Contact us</h1><!-- Just here i use "url_for" to call the function get_contact.
          This function return the html code of our contact page-->
     <form action="{{ url_for('contact') }}" method=post>
-        <div>
+        <div class="form-field">
             <!-- name forms -->
-            <p>
-                {{ form.name.label }}
-                {{ form.name(placeholder='Your name') }}
-            </p>
+
+            <div class="control">
+                <input class="input is-medium " type="name" placeholder="name" autocomplete="name" required="">
+              </div>
+            
             <!-- email forms -->
-            <p>
-                {{ form.email.label }}
-                {{ form.email(placeholder='Your e-mail ...') }}
-            </p>
-            <!-- Subject of your request -->
-            <p>
-                {{ form.subject.label }}
-                {{form.subject(placeholder='Your subject ...')}}
-            </p>
-            <!-- Content of your request -->
-            <p>
-                {{ form.message.label }}
-                {{ form.message(placeholder='Write your request ...') }}
-            </p>
+            <div class="control">
+                <input class="input is-medium " type="email" placeholder="hello@example.com" autocomplete="username" required="">
+              </div>
+                        <!-- Subject of your request -->
+                        <div class="control">
+                            <input class="input is-large "  type="Requesst" placeholder="Request"   required="" style="height:15em; font-size:12px;">
+                          </div>
+                        
             <!-- Submit button -->
             <p>
-                {{ form.submit }}
+                <button  style="width:10em;" class="button  is-info     rounded" type="submit"   >Send Request</button>
             </p>
         </div>
     </form>
@@ -60,13 +55,13 @@
 {% endblock %}
 </body>
 
-<footer>
-    <h3>GitHub Repo</h3>
+<footer class="Footer">
+    <h3 class="title" style="color:orange">GitHub Repo</h3>
     <a href="https://github.com/MurtadhaM/ITSC-3155/tree/main/Final%20Project/Travel_App/Flask"><img
             src="https://miro.medium.com/max/719/0*kHdpA0lO-qQVbaXq.png" width="200px" height="100px" align="center"
             alt="footer"></a>
 
-    <p>This is a WIP and does not entirely portray any opinions. That is to be said, <b>do not take our advice.</b></p>
+    <p style="color:orange">This is a WIP and does not entirely portray any opinions. That is to be said, <b>do not take our advice.</b></p>
 </footer>
 
 </html>

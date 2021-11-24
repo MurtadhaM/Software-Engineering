@@ -10,48 +10,21 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
 </head>
 <style>
-    body {
-        /*    background-image: url("/static/3.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;*/
-    }
-    
-    * {
-        box-sizing: border-box;
-    }
-    
-    .column {
-        float: left;
-        width: 33.33%;
-        padding: 5px;
-    }
-    /* Clearfix (clear floats) */
-    
-    .row::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-    
-    footer {
-        margin-top: 40px;
-    }
-    
-    .Homeh2,
-    .Homeh3 {
-        color: green;
-    }
-    
-    h2 {
-        color: orange;
-    }
-    
-    img {
-        align-self: center;
-    }
+   span{
+       width: 100%;
+       margin-bottom: 2em;
+
+   }
+   h2{
+       margin-bottom: 2em;
+   }
+   
 </style>
 
 <body>
@@ -71,10 +44,63 @@
         <br>
         <br>
         <br>
-        <h2 class="Homeh2">Project Gemini</h2>
-        <h3 class="Homeh3">Our Partners</h3>
+        <h2 class="title" style="text-align: center;">Our Partners</h2>
+        <section class="container">
+        <div class="column is-4">
+            <div class="card is-shady">
+                <span class="button is-centered is-link " data-target="modal-image2">World Health Orginization</span>
 
-        <div class="row">
+              <div class="card-image">
+
+                <figure class="image is-4by3">
+                  <img src="https://reliefweb.int/sites/reliefweb.int/files/resources/WHO%20logo%20vertical%202016%20neg.jpg" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <h4>World Health Orginization</h4>
+                  <p>The World Health Organization is a specialized agency of the United Nations responsible for international public health. The WHO Constitution states its main objective as "the attainment by all peoples of the highest possible level of health". Wikipedia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-4">
+            <span class="button is-link modal-button" data-target="modal-card">World Data</span>
+
+            <div class="card is-shady">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="https://images.hindustantimes.com/img/2021/09/16/1600x900/1172151_1629853460862_1631806416071.jpg" alt="World Bank">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <h4>World Bank Open.</h4>
+                  <p>The World Bank is the largest single source of development knowledge. The World Bank Open Knowledge Repository (OKR) is The World Bank’s official open access repository for its research outputs and knowledge products..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-4 modal-button" data-target="modal-image">
+            <div class="card is-shady">
+
+                <span class="button is-link modal-button" data-target="modal-image">United Nations High Commissioner for Refugees</span>
+
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="https://pbs.twimg.com/profile_images/1223095855902687232/xJ5qt3XR_400x400.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <h4>United Nations High Commissioner</h4>
+                  <p>The United Nations High Commissioner for Refugees is a UN agency mandated to aid and protect refugees, forcibly displaced communities, and stateless people, and to assist in their voluntary repatriation, local integration or resettlement to a third country. Wikipedia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <div class="row">
             <div class="column">
                 <h2 style="margin-left: 60%;">World Health Orginization</h2>
                 <img src="{{ url_for('static', filename='4.jpg')}}" width="100%" height="20%" align="left" style="margin-left
@@ -87,14 +113,14 @@
 
         </div>
 
-        <p class="desc1">With the help of our partners, Gemini is able to provide information to users </p>
+        <p class="desc1">With the help of our partners, Gemini is able to provide information to users </p> -->
 
     </main>
     <footer style="margin-top: 100px;">
-
+<!-- 
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52095.28431900228!2d-80.77018292089842!3d35.3070929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88541c1ad0a92357%3A0x6b3f67f7f19324f3!2sUniversity%20of%20North%20Carolina%20at%20Charlotte!5e0!3m2!1sen!2sus!4v1636490591739!5m2!1sen!2sus"
             width="300" height="235" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        <p>Copyright &copy; 2021 Project Gemini</p>
+        <p>Copyright &copy; 2021 Project Gemini</p> -->
 
     </footer>
 </body>
