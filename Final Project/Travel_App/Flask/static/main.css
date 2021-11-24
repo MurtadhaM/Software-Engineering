@@ -51,20 +51,25 @@ select {
     padding-top: 12px;
     padding-bottom: 12px;
 }
-
+*/
 .formwrapper {
     text-align: center;
-}*/
+    margin-top: 10em;
+}
 
+html{
+  /* background: #0ca3d2; */
+
+}
 body {
   font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
   color: #404040;
-  background: #0ca3d2;
+  /* background: #0ca3d2; */
   text-align: center;
 }
 
 .loginspecificpadding {
-   padding-top: 20em;
+   margin-top: 20em;
 }
 
 .login {
@@ -314,9 +319,14 @@ input[type=submit]:active {
       box-sizing: border-box;
 }
 .column {
+
       float: left;
-      width: 33.33%;
-      padding: 5px;
+      /* width: 600px;
+      height: 400px; */
+     float: left;
+       width: 32%;
+      margin: 0px;
+      height: 40%; 
     }
     /* Clearfix (clear floats) */
 .row::after {
@@ -325,7 +335,10 @@ input[type=submit]:active {
       display: table;
     }
 footer{
-        margin-top: 40px;
+      width: 100%;
+      /* height: 100px; */
+
+        background-color: #333;
 
     }
 table, th, td {
@@ -333,9 +346,4 @@ table, th, td {
   background: white;
   margin-left:auto;
   margin-right:auto;
-}
-.row2 {
-}
-.row1 {
- background: #dedcdc;
 }

@@ -9,11 +9,74 @@
     <title>Home</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 <style>
+        .corousel-inner .my-inner{       
+            
+            border-top: 10px;
+            border-left: 10px;
+            border-right: 10px;
+            border-bottom: 00px;
+            border-color: red;
+            border-style: solid;
+        }
+    
+    html{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    #myCarousel{
+        background-color:  darkviolet;
+        margin-left: 25%;
+        margin-right:25%;
+        width: 50%;
+    }
+    img{
+        width: 100%;
+        
+        height:100%;
+    }
 
-</style>
+    
+
+    .top-content .carousel-control-next {
+        right: -110px;
+        border-bottom: 0;
+        font-size: 40px;
+        color: rgb(223, 0, 0);
+    }
+    .carousel-control-next-icon ,  .carousel-control-prev-icon {
+        background-color: rgb(112, 0, 112);
+        border-radius: 50%;
+        border: 2px solid rgb(112, 0, 112);
+        width: 40px;
+        height: 40px;
+        margin-top: 100%;
+    }
+    .carousel-control-next-icon:hover ,  .carousel-control-prev-icon:hover {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-top: 100%;
+    }
+    .carousel-control-prev, .carousel-control-next {
+        margin-top: 5%;
+        margin-right: 15%;
+        margin-left: 15%;
+
+
+    }
+          
+
+        </style>
+        </head>
+        <body>
+        
+        
 <body>
 <header>
     <nav class="nav" style="margin-top: -10px;margin-left: -10px;margin-right: -10px;">
@@ -27,42 +90,80 @@
     </nav>
 </header>
 
-<main>
+
+<main style="margin-top:5%">
     <br>
-    <h2 class="Homeh2">Project Gemini</h2>
-    <h3 class="Homeh3">Travel at it's Finest!</h3>
+    <br>
+    <h1 class="Homeh2" style="color:green">Project Gemini</h1>
+    <h3 class="Homeh3" style="color:orange">Travel at it's Finest!</h3>
+<br>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
 
-    <div class="row">
-        <div class="column">
-            <h2>Get Inspired!</h2>
-            <img src="{{ url_for('static', filename='1.jpg')}}" width="100%" height="30%" align="left" style="margin-right
-    : -200px;margin-top: 50px; margin-left: -3%;" alt="Get Inspired!">
+    </ol>
+    <div class="carousel-inner" role="listbox" style=" width:100%; height: 500px !important;             border-top: 5px;
+    border-left: 5px;
+    border-right: 5px;
+    border-bottom: 5px;
+    border-color:green;
+    border-style: solid;">
+              <div class="carousel-item active">
+        <img class="first-slide" src="{{ url_for('static', filename='1.jpg')}}" alt="First slide">
+
+      </div>
+      <div class="carousel-item">
+        <img class="second-slide" src="{{ url_for('static', filename='2.jpg')}}" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="third-slide" src="https://topvacationtravel.com/wp-content/uploads/2018/02/Things-You-Should-Keep-in-Your-Mind-While-Traveling-Solo.jpg" alt="Third slide">
+
         </div>
-        <div class="column">
-            <h2>Travel with Confidence!</h2>
-            <img src="{{ url_for('static', filename='2.jpg') }}" width="127%" height="30%" align="top"
-                 style=" margin-right: 15px; margin-top: 50px; margin-left: -30px" alt="Travel with Confidence!">
-        </div>
-        <div class="column">
-            <h2>Explore the world!</h2>
-            <img src="{{ url_for('static', filename='3.jpg') }}" width="100%" height="30%" align="right" style="margin-left: -300px; margin-top: 50px;
-margin-right: -15px;" alt="Explore the World!">
-        </div>
+        <div class="carousel-item">
+            <img class="fourth-slide" src="{{ url_for('static', filename='3.jpg')}}" alt="fourth slide">
+    
+            </div>
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <i class="far fa-angle-double-left"></i>
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
 
-    <p class="desc1">With the Gemini App, you can explore the world knowing that your time and money won't be wasted on
-        the how.
+        <i class="far fa-angle-double-right"></i>
 
-        Now you can focus on enjoying your time at a local restaurant or see the wonderful historical sites in the any
-        destination you please!</p>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <i class="fas fa-arrow-right" aria-hidden="false"></i>
+      <span class="sr-only">Next</span>
+    </a>
+   
+  </div>
+
+
+<br>
 
 </main>
 
-<footer style="margin-top: 100px;">
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52095.28431900228!2d-80.77018292089842!3d35.3070929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88541c1ad0a92357%3A0x6b3f67f7f19324f3!2sUniversity%20of%20North%20Carolina%20at%20Charlotte!5e0!3m2!1sen!2sus!4v1636490591739!5m2!1sen!2sus"
-            width="300" height="235" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <p>Copyright &copy; 2021 Project Gemini</p>
+<footer class="footer" id="footer" style=""  >
+    
+
+
+    <h2 class="Description" style="color:orange ;" > <br>With the Gemini App, you can explore the world knowing that your time and money won't be wasted on
+        the how.
+
+        Now you can focus on enjoying your time at a local restaurant or see the wonderful historical sites in the any
+        destination you please!</h2>
+
+    <p style="color:red">Copyright &copy; 2021 Project Gemini</p>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </footer>
 

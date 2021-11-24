@@ -7,6 +7,9 @@
     <title>Contact us </title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='forms.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    
 </head>
 
 <body>
@@ -16,12 +19,13 @@
     <a href="{{url_for('login')}}">Login</a>
     <a href="{{url_for('partners')}}">Our Partners</a>
     <a class="current" href="{{url_for('contact')}}">Contact Us</a>
+    
 
 
 </nav>
 <h1>Contact Us</h1>
 {% block content %}
-<div class="contact">
+<div class="contact" style="margin-top: 10em">
     <h3>Contact us</h3><!-- Just here i use "url_for" to call the function get_contact.
          This function return the html code of our contact page-->
     <form action="{{ url_for('contact') }}" method=post>

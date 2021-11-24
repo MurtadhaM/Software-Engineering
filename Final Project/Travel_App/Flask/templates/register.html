@@ -8,6 +8,9 @@
     <title>Register User</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='forms.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    
 </head>
 <style>
     .errors {
@@ -29,11 +32,11 @@
 <div>
     <br>
     <br>
-    <h1>Project Gemini Registration</h1>
-    <h1>Welcome</h1>
-    <h2>The Travel Advisory Site </h2>
+   
     <div class="formwrapper" id="formwrapper">
-        <h2 class="title">Register Below:</h2>
+        <h1>Project Gemini Registration</h1>
+    <h1>Welcome</h1>
+    <h2>The Travel Advisory Site </h2> <h2 class="title">Register Below:</h2>
         <form method="POST" action="/register">
             <div class="form-field" style="margin-left: -5em;">{{ form.firstname.label }} {{ form.firstname }}
                 {% if form.firstname.errors %}

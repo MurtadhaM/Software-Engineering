@@ -8,21 +8,27 @@
     <title>User Login</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='forms.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    
 </head>
 
+
 <body>
+    <header>
 <nav class="nav" style="margin-top: -10px;margin-left: -10px;margin-right: -10px;">
     <a href="{{ url_for('home') }}">Home</a>
     <a class="current" href="{{url_for('login')}}">Login</a>
     <a href="{{url_for('partners')}}">Our Partners</a>
     <a href="{{url_for('contact')}}">Contact Us</a>
 </nav>
-
+</header>
+<main>
 <div class="loginspecificpadding">
     <h1>Welcome {% if user %}{{user}}{% endif %} to Project Gemini!</h1>
 
     <h2>This site is the one stop for all your travel needs.</h2>
-    <div class="formwrapper">
+    <div class="">
         <h2 class="title">Login</h2>
         <form method="POST" action="/login">
             <div class="form-field">{{ form.email.label }} {{ form.email }} {% if form.email.errors %}
@@ -47,10 +53,12 @@
         <a href="register"> <input type="button" action="/register" value="Register"> </a>
     </div>
 </div>
+</main>
+<footer>
+    <p style="color:orange; background:transparent">This is a WIP and does not entirely portray any opinions. That is to be said, <b>do not take our advice.</b></p>
+</footer>
 </body>
 
-<footer>
-    <p>This is a WIP and does not entirely portray any opinions. That is to be said, <b>do not take our advice.</b></p>
-</footer>
+
 
 </html>
