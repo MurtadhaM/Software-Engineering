@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- partners.html -->
+
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
@@ -8,7 +11,6 @@
 
 </head>
 <style>
-
   body  {
     background-image: url("/static/3.jpg");
     background-repeat: no-repeat;
@@ -47,45 +49,53 @@ color: orange;
       border-bottom-left-radius: 50% 50%;
       align-self: center;
   }
-    </style>
+
+
+
+
+</style>
 <body>
-    <header>
+<header>
     <nav class="nav" style="margin-top: -10px;margin-left: -10px;margin-right: -10px;">
 
         <a href="{{ url_for('home') }}">Home</a>
-<!--        <a href="{{url_for('register')}}">Register</a>-->
+        <!--        <a href="{{url_for('register')}}">Register</a>-->
         <a href="{{url_for('login')}}">Login</a>
-        <a class = "current" href="{{url_for('partners')}}">Our Partners</a>
+        <a class="current" href="{{url_for('partners')}}">Our Partners</a>
         <a href="{{url_for('contact')}}">Contact Us</a>
 
     </nav>
 </header>
 
 <main>
-<br>
-    <h2 class = "Homeh2">Project Gemini</h2>
-            <h3 class = "Homeh3">Our Partners</h3>
+    <br>
+    <h2 class="Homeh2">Project Gemini</h2>
+    <h3 class="Homeh3">Our Partners</h3>
 
     <div class="row">
         <div class="column">
             <h2 style="margin-left: 60%;">World Health Orginization</h2>
-          <img src="{{ url_for('static', filename='4.jpg')}}" width="100%" height="20%"  align="left"  style="margin-left
+            <img src="{{ url_for('static', filename='4.jpg')}}" width="100%" height="20%" align="left" style="margin-left
     : 31%;margin-top: 50px;" alt="Partner 1 !">
         </div>
         <div class="column" style="margin-left: 20%">
             <h2>World Bank Open Data</h2>
-            <img src="{{ url_for('static', filename='5.png') }}"  width="100%" height="20%" align="top" style="margin-right: 0px; margin-top: 50px; margin-left: 0px; background-color: white" alt="Travel with Confidence!">
+            <img src="{{ url_for('static', filename='5.png') }}" width="100%" height="20%" align="top"
+                 style="margin-right: 0px; margin-top: 50px; margin-left: 0px; background-color: white"
+                 alt="Travel with Confidence!">
         </div>
-    
-      </div>
+
+    </div>
 
     <p class="desc1">With the help of our partners, Gemini is able to provide information to users </p>
 
 </main>
 <footer style="margin-top: 100px;">
 
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52095.28431900228!2d-80.77018292089842!3d35.3070929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88541c1ad0a92357%3A0x6b3f67f7f19324f3!2sUniversity%20of%20North%20Carolina%20at%20Charlotte!5e0!3m2!1sen!2sus!4v1636490591739!5m2!1sen!2sus" width="300" height="235" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52095.28431900228!2d-80.77018292089842!3d35.3070929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88541c1ad0a92357%3A0x6b3f67f7f19324f3!2sUniversity%20of%20North%20Carolina%20at%20Charlotte!5e0!3m2!1sen!2sus!4v1636490591739!5m2!1sen!2sus"
+            width="300" height="235" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     <p>Copyright &copy; 2021 Project Gemini</p>
+
 </footer>
 </body>
 </html>

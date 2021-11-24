@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- contact.html -->
 
 <head>
     <meta charset="UTF-8">
@@ -8,18 +9,18 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='forms.css') }}">
 </head>
 
-<body >
-    <nav class="nav" style="margin-top: -10px;margin-left: -10px;margin-right: -10px;">
+<body>
+<nav class="nav" style="margin-top: -10px;margin-left: -10px;margin-right: -10px;">
 
-        <a href="{{ url_for('home') }}">Home</a>
-        <a class = "current" href="{{url_for('login')}}">Login</a>
-        <a href="{{url_for('partners')}}">Our Partners</a>
-        <a href="{{url_for('contact')}}">Contact Us</a>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a class="current" href="{{url_for('login')}}">Login</a>
+    <a href="{{url_for('partners')}}">Our Partners</a>
+    <a href="{{url_for('contact')}}">Contact Us</a>
 
 
-    </nav>
-    <h1>Contact Us</h1>
-      {% block content %}
+</nav>
+<h1>Contact Us</h1>
+{% block content %}
 <div class="contact">
     <h3>Contact us</h3><!-- Just here i use "url_for" to call the function get_contact.
          This function return the html code of our contact page-->
@@ -27,12 +28,12 @@
         <div>
             <!-- name forms -->
             <p>
-                {{ form.name.label }} 
+                {{ form.name.label }}
                 {{ form.name(placeholder='Your name') }}
             </p>
             <!-- email forms -->
             <p>
-                {{ form.email.label }} 
+                {{ form.email.label }}
                 {{ form.email(placeholder='Your e-mail ...') }}
             </p>
             <!-- Subject of your request -->
@@ -51,12 +52,15 @@
             </p>
         </div>
     </form>
-</div>{% endblock %}
+</div>
+{% endblock %}
 </body>
 
 <footer>
     <h3>GitHub Repo</h3>
-    <a href="https://github.com/MurtadhaM/ITSC-3155/tree/main/Final%20Project/Travel_App/Flask"><img src="https://miro.medium.com/max/719/0*kHdpA0lO-qQVbaXq.png" width="200px" height="100px" align="center" alt="footer"></a>
+    <a href="https://github.com/MurtadhaM/ITSC-3155/tree/main/Final%20Project/Travel_App/Flask"><img
+            src="https://miro.medium.com/max/719/0*kHdpA0lO-qQVbaXq.png" width="200px" height="100px" align="center"
+            alt="footer"></a>
 
     <p>This is a WIP and does not entirely portray any opinions. That is to be said, <b>do not take our advice.</b></p>
 </footer>
