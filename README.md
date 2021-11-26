@@ -1,8 +1,14 @@
+<h2 style="color: purple; text-align:center"> <a href="https://github.com/MurtadhaM/ITSC-3155/blob/main/Final%20Project/Travel_App/Flask/Final%20Project.zip">Link Final Project Zip File <img src="https://emojis.slackmojis.com/emojis/images/1622054242/41559/im_here.gif?1622054242" >
+
  <h1 align="center"><img src="https://emojis.slackmojis.com/emojis/images/1617692489/27845/digging.gif?1617692489" width="30"/> ITSC-3155 Software Engineering</h1>
 
 
 
-<h2 style="color: purple; text-align:center"> <a href="https://github.com/MurtadhaM/ITSC-3155/blob/main/Final%20Project/Travel_App/Flask/Final%20Project.zip"> Link Final Project Zip File </a> </h2>
+
+ </a> </h2>
+
+
+
 
  <h2 align="center" >Team: <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/></h2>
 <div >
