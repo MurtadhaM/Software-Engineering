@@ -31,7 +31,7 @@ Devon Cesca</li>
  </tr>
  </tr>                </table>             </td>          </tr>                 </table>
  
- <h2>
+ <h2 align="center">
  <b>Note: <b>The app is setup to run on localhost port 5000 so to access the application:
   <br>
 
@@ -47,11 +47,27 @@ http://127.0.0.1:5000/
 </h2>
 
 
-
- 
-
-
-                      
+<h2 align="center"> <strong> Screenshots of Gemini </strong></h2>
+<p align="center">
+<img src="https://raw.githubusercontent.com/MurtadhaM/ITSC-3155/main/Final%20Project/Travel_App/Flask/screenshots/1.png?raw=true" width="60%" title="Visualization" width="45%">
 
 
+<img src="https://raw.githubusercontent.com/MurtadhaM/ITSC-3155/main/Final%20Project/Travel_App/Flask/screenshots/2.png?raw=true" width="60%" title="Visualization" width="45%">
 
+
+<img src="https://raw.githubusercontent.com/MurtadhaM/ITSC-3155/main/Final%20Project/Travel_App/Flask/screenshots/3.png?raw=true" width="60%" title="Visualization" width="45%">
+
+
+<img src="https://raw.githubusercontent.com/MurtadhaM/ITSC-3155/main/Final%20Project/Travel_App/Flask/screenshots/4.png?raw=true" width="60%" title="Visualization" width="45%">
+
+
+
+<img src="https://raw.githubusercontent.com/MurtadhaM/ITSC-3155/main/Final%20Project/Travel_App/Flask/screenshots/5.png?raw=true" width="60%" title="Visualization" width="45%">
+
+
+<img src="https://raw.githubusercontent.com/MurtadhaM/ITSC-3155/main/Final%20Project/Travel_App/Flask/screenshots/6.png?raw=true" width="60%" title="Visualization" width="45%">
+
+<img src="https://raw.githubusercontent.com/MurtadhaM/ITSC-3155/main/Final%20Project/Travel_App/Flask/screenshots/7.png?raw=true" width="60%" title="Visualization" width="45%">
+
+</p>
+      
