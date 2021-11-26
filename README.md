@@ -2,7 +2,7 @@
 
 
 
-<h2 style="color: purple; text-align:center"> <a href="https://github.com/MurtadhaM/ITSC-3155/tree/main/Final%20Project/Travel_App/Flask"> Link Final Project </a> </h2>
+<h2 style="color: purple; text-align:center"> <a href="https://github.com/MurtadhaM/ITSC-3155/blob/main/Final%20Project/Travel_App/Flask/Final%20Project.zip"> Link Final Project Zip File </a> </h2>
 
  <h2 align="center" >Team: <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/></h2>
 <div >
