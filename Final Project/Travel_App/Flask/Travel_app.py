@@ -55,9 +55,7 @@ def bruh():
     return render_template("bruh.html")
 
 
-@app.route('/test')
-def test():
-    return render_template("test/Home.html")
+
 
 
 # Setting up the routes
